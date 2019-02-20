@@ -14,7 +14,7 @@ if (process.env.ENDPOINT_ENV === 'api_gw') {
   app.use(envMiddleware)
 }
 
-if (process.env.NODE_ENV !== 'development') {
+if (process.env.NODE_ENV !== 'local') {
   app.use(loggerMiddleware)
 }
 

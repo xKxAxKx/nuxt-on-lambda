@@ -6,7 +6,7 @@
   "author": "t.shibuta <make.app.ts@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon server/local.js --watch server",
+    "dev": "cross-env NODE_ENV=local nodemon server/local.js --watch server",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/local.js",
     "generate": "nuxt generate",
@@ -14,8 +14,7 @@
     "precommit": "npm run lint",
     "sls": "sls",
     "sls:deploy": "sls deploy",
-    "deploy": "cross-env NODE_ENV=production ENDPOINT_ENV=cf run-s build sls:deploy",
-    "deploy:api_gw": "cross-env NODE_ENV=\"production\" ENDPOINT_ENV=api_gw run-s build sls:deploy",
+    "deploy:api_gw": "cross-env NODE_ENV=production ENDPOINT_ENV=api_gw run-s build sls:deploy",
     "delete": "sls remove"
   },
   "dependencies": {

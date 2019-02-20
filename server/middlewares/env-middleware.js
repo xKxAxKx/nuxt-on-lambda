@@ -16,13 +16,6 @@ const envMiddleware = (req, res, next) => {
   const originalUrl = req.url
   const envUrl = buildPath(originalUrl)
   req.url = envUrl
-  console.log(
-    '[info]',
-    'Overwrite URL',
-    `'${originalUrl}'`,
-    'to',
-    `'${envUrl}'`
-  )
   next()
 }
 

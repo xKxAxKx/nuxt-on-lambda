@@ -15,7 +15,7 @@
     "sls": "sls",
     "sls:deploy": "sls deploy",
     "deploy": "cross-env NODE_ENV=production ENDPOINT_ENV=cf run-s build sls:deploy",
-    "deploy:api_gw": "cross-env NODE_ENV=production ENDPOINT_ENV=api_gw run-s build sls:deploy",
+    "deploy:api_gw": "cross-env NODE_ENV=\"production\" ENDPOINT_ENV=api_gw run-s build sls:deploy",
     "delete": "sls remove"
   },
   "dependencies": {

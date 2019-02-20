@@ -1,4 +1,4 @@
-const { ENV } = require('./configs/env')
+const { ENV } = require('./env/env')
 
 const routerConfig = {}
 if (ENV.BASE_URL) {
